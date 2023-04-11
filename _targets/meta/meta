@@ -1,0 +1,4 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+create_data|function|e042a0793ee24891|||||||||||||||
+data|stem|f6044ddf5e5aa5c6|e1fe6de3bbb1d0be|c61373fe3cf2c3ad|1588979285||t19458.1204620823s|3ad8a83d36e5188f|60687|rds|local|vector|||11.471||
+data_path|object|7027d3927d618dc2|||||||||||||||
