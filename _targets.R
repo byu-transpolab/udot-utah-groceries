@@ -20,10 +20,10 @@ options(tigris_use_cache = TRUE)
 
 options(java.parameters = "-Xmx8G")
 
-data_path <- "Data/Utah_Grocery_And_Food_Stores__UDAF_.csv"
 
 # End this file with a list of target objects.
 list(
-  tar_target(data, create_data(data_path))
-  #tar_target(imputed_data, impute_data(data))
+  tar_target(data, create_data("Data/Utah_Grocery_And_Food_Stores__UDAF_.csv")),
+  tar_target(exist_data, existing_data("Data/data_saltlake.csv", "Data/data_sanjuan.csv", "Data/data_utah.csv"))
+  #tar_target(imputed_data, impute_data(data, exist_data))
 )
