@@ -19,11 +19,16 @@ create_data <- function(grocery_file, county_file){
       }
     }
   }
+  
+  groceries <- as.data.frame(groceries) %>% mutate(Latitude = unlist(map(groceries$geometry,2)),
+                                                    Longitude = unlist(map(groceries$geometry,1)))
+  
   groceries
 }
 
 
 existing_data <- function(file1, file2, file3){
+  #reads in files
   x <- read.csv(file1)
   y <- read.csv(file2)
   z <- read.csv(file3)
@@ -58,7 +63,7 @@ combine_data <- function(data, exist_data){
   data$type <- data$TYPE
   
   data <- data %>% select(Name, type, county, registers, selfchecko, total_registers,
-                          availability, cost, market, brand)
+                          availability, cost, market, brand, Latitude, Longitude)
   
   #now for the data that already exists
   exist_data$county <- ""
@@ -72,13 +77,64 @@ combine_data <- function(data, exist_data){
     }
   }
   exist_data <- exist_data %>% select(Name, type, county, registers, selfchecko, total_registers,
-                                      availability, cost, market, brand)
+                                      availability, cost, market, brand, Latitude, Longitude)
   
+  #binds the existinf data with the overall grocery stores data
   combined_data <- rbind(data, exist_data)
+  
+  #creates and assigns the data for the large brand stores
+  for(x in 1:length(combined_data$brand)){
+    if(grepl("mace", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Macey's"
+    } else if(grepl("harmon", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Harmons"
+    } else if(grepl("family", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Family Dollar"
+    } else if(grepl("smit", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Smith's"
+    } else if(grepl("targ", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Target"
+    } else if(grepl("tree", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Dollar Tree"
+    } else if(grepl("wal", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      if(grepl("mart", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+        combined_data$brand[x] <- "Walmart"
+      } else if(grepl("reen", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+        combined_data$brand[x] <- "Walgreens"
+      }
+    } else if(grepl("winco", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Winco"
+    } else if(grepl("dollar general", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$brand[x] <- "Dollar General"
+    }else {
+      combined_data$brand[x] <- "Other"
+    }
+  }
+  
+  #creates and assigns the data for the type of stores
+  for(x in 1:length(combined_data$type)){
+    if(grepl("dollar", tolower(combined_data$Name[x]), fixed = TRUE) == TRUE){
+      combined_data$type[x] <- "Dollar Store"
+    } else if(grepl("grocery", tolower(combined_data$type[x]), fixed = TRUE) == TRUE){
+      combined_data$type[x] <- "Grocery Store"
+    } else{
+      combined_data$type[x] <- "Other"
+    }
+    
+    if(grepl("walmart", tolower(combined_data$brand[x]), fixed = TRUE) == TRUE){
+      combined_data$type[x] <- "Grocery Store"
+    }
+  }
+  
+  
   combined_data
 }
 
 impute_data <- function(data, acquired_data){
+  library(mice)
+  
+  
+  
   #thought process
   
   ###PROBLEM
