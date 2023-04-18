@@ -1,6 +1,10 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-create_data|function|c34e7f3b6b726cdc|||||||||||||||
-data|stem|f6044ddf5e5aa5c6|f54e48aa66312344|42c79c54a14f1a2a|1588979285||t19458.6942649416s|3ad8a83d36e5188f|60687|rds|local|vector|||0.01||
+combine_data|function|20b49bc6d286b070|||||||||||||||
+combined_data|stem|2d9dfdc8d97f27d8|27e4b1f516ef2c9a|83af4741dc2ceaba|-2087540798||t19465.7069633978s|52ae0227e1cb8b83|31694|rds|local|vector|||0.627||
+create_data|function|cda541ec150877c5|||||||||||||||
+data|stem|76cbbe4a2220691b|2ce77895d521a4e6|834cf385c1b73580|1588979285||t19465.7018164789s|8686afdf5acc57a8|87477|rds|local|vector|||722.615||
 data_path|object|7027d3927d618dc2|||||||||||||||
-exist_data|stem|13de553ee064c2d2|45902f611865d08f|72e5726f5f4e3965|782767558||t19458.699810418s|04eb2b9372f7129b|5227|rds|local|vector|||2.014||
+exist_data|stem|42c694ce77943ef8|028a9009651c54d2|72e5726f5f4e3965|782767558||t19465.6768824803s|8eac4585accd25ba|6221|rds|local|vector|||2.913||
 existing_data|function|964bca052ff200c8|||||||||||||||
+impute_data|function|b440f9a618e35d10|||||||||||||||
+latlong2county|function|e8586a899bb9aa39|||||||||||||||
