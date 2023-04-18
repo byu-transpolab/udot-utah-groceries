@@ -130,30 +130,48 @@ combine_data <- function(data, exist_data){
   combined_data
 }
 
-impute_data <- function(data, acquired_data){
+impute_data <- function(data){
   library(mice)
   
+  imp <- mice(data, method = "mean", m = 1, maxit = 1)
   
+  imputed_data <- complete(imp)
+  imputed_data
+}
+
+
+get_acs_data <- function(combined_data, county_file){
+  counties <- st_read(county_file) %>% select(NAME)
   
-  #thought process
+  acs_tibble <- get_acs_income_data("UT", counties$NAME[1])
+  for(x in 2:length(counties$NAME)){
+    acs_tibble <- rbind(acs_tibble, get_acs_income_data("UT", counties$Name[x]))
+  }
+  acs_tibble_2 <- acs_tibble %>% group_by(GEOID) %>% slice(1)
   
-  ###PROBLEM
-  #at some point in the original project, the object id of each store is changed,
-  #how was this new id assigned?
-  #was it done manually?
-  #do we need to match the geometry in order to reassign the original object id so
-  #that we can use the data set of all of the store locations?
+  DT_sf = st_as_sf(combined_data, coords = c("Longitude", "Latitude"), crs = 4326)
+  DT_sf$income <- NA
   
-  #combine the data data.frame with te acquired data frame, and make columns to 
-  #include the data from the acquired data.frame tp create one large data frame 
-  #with missign values for unknown store attributes
+  acs_geom <- acs_tibble_2 %>% select(geometry) %>% st_as_sf() %>% st_transform(4326)
+  grocery_geom <- DT_sf %>% select(geometry) %>% st_as_sf()
   
-  #segment the data into three sub data sets that correspond with counties that are
-  #similar to salt lake, utah, and san juan
+  for(x in 1:length(acs_geom$geometry)){
+    for(y in 1:length(grocery_geom$geometry)){
+      if(st_intersects(grocery_geom$geometry[y], acs_geom$geometry[x], sparse = FALSE)==TRUE){
+        DT_sf$income[y] <- acs_tibble_2$estimate[x]
+      }
+    }
+  }
+  DT_sf
+}
+
+get_acs_income_data <- function(stat, county){
+  variables <- c("income" = "B19013_001")
   
-  ###PROBLEM
-  #we do not have the square footage data for the other utah stores, so another 
-  #method of comaprison needs to be used. We could use a method that uses the nearest 
-  #store that matches that name, or we could use an average
+  income_table <- get_acs(geography = "block group", variables = "B19013_001",
+          state = stat, county = county, geometry = TRUE) %>%
+    as_tibble()
   
 }
+
+
