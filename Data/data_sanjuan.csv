@@ -1,0 +1,51 @@
+"","id","Name","type","pharmacy","ethnic","merch","registers","selfchecko","total_registers","availability","cost","market","brand","area"
+"1","SJ-056","Blue Mountain Foods","Grocery Store","FALSE","FALSE","FALSE","3","0",3,22,4,151.335830232558,"Other",57727.619990617
+"2","SJ-066","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","2","0",2,13,0,189.395080276132,"Family Dollar",20289.906815052
+"3","SJ-059","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","4","0",4,12,4,169.272572046087,"Family Dollar",138069.573170045
+"4","SJ-006","Clark's Market","Grocery Store","FALSE","FALSE","FALSE","5","0",5,23,4,164.661862015504,"Other",109007.503044355
+"5","SJ-005","Grayson General Store","Other","FALSE","FALSE","FALSE","1","0",1,13,3,168.592031228124,"Other",27834.2937019467
+"6","SJ-057","Goulding's Grocery","Grocery Store","FALSE","FALSE","FALSE","3","0",3,19,2,122.444920155039,"Other",67541.7816588283
+"7","SJ-003","K&C Trading Post","Trading Post","FALSE","FALSE","FALSE","2","0",2,14,0,163.958470656609,"Other",28750.9638826847
+"8","SJ-001","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","4","0",4,9,1,192.965906751776,"Family Dollar",197695.561267614
+"9","SJ-043","Dove Creek Superette","Grocery Store","FALSE","FALSE","FALSE","3","0",3,13,-1,167.149661288881,"Other",41764.5957209468
+"10","SJ-044","Dove Creek Sinclair","Convenience Store","FALSE","FALSE","FALSE","1","0",1,6,2,173.720621690674,"Other",32517.2779787779
+"11","SJ-045","Frosty's AG Market","Other","FALSE","FALSE","FALSE","1","0",1,1,0,173.44448835734,"Other",28129.3153525293
+"12","SJ-042","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","2","0",2,12,0,170.715382123607,"Family Dollar",54375.0572434664
+"13","SJ-047","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","2","0",2,12,0,169.343548790273,"Family Dollar",43054.0839865506
+"14","SJ-052","Good 2 Go","Convenience Store","FALSE","FALSE","FALSE","1","0",1,6,1,173.435621690674,"Other",15348.4336994439
+"15","SJ-051","City Market","Grocery Store","TRUE","FALSE","FALSE","8","6",14,26,6,156.393119379845,"Other",246673.94553566
+"16","SJ-049","Safeway","Grocery Store","FALSE","FALSE","FALSE","13","0",13,26,3,149.708109481216,"Other",287019.167081416
+"17","SJ-050","Walgreens","Other","TRUE","FALSE","FALSE","3","0",3,15,4,175.88357050461,"Other",125793.530554891
+"18","SJ-046","Walmart Supercenter","Grocery Store","FALSE","FALSE","TRUE","10","21",31,25,7,133.478123255814,"Walmart",771855.142544508
+"19","SJ-048","Dollar Tree","Dollar Store","FALSE","FALSE","FALSE","2","0",2,6,1,168.207877246229,"Dollar Tree",41069.1243002498
+"20","SJ-053","Esmeralda's Ranchito Mexican Grocery Store","Grocery Store","FALSE","TRUE","FALSE","1","0",1,3,1,174.13893835734,"Other",16806.6625667959
+"21","SJ-055","Dollar General","Dollar Store","FALSE","FALSE","FALSE","2","0",2,11,0,187.171174193637,"Other",98721.9862033129
+"22","SJ-034","Dollar General","Dollar Store","FALSE","FALSE","FALSE","1","0",1,12,3,170.323631865209,"Other",82068.4313496351
+"23","SJ-037","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,5,1,190.400436984335,"Other",36189.5801867545
+"24","SJ-019","Wamart Supercenter","Grocery Store","TRUE","FALSE","FALSE","11",".28",11.28,23,-1,120.710448062016,"Other",907737.700981379
+"25","SJ-011","Safeway","Grocery Store","TRUE","FALSE","FALSE","10","4",14,27,4,169.30548372093,"Other",110844.581810474
+"26","SJ-026","Sam's Club","Grocery Store","FALSE","FALSE","FALSE","10","7",17,21,3,148.375516537468,"Other",508346.01443851
+"27","SJ-021","Walmart Supercenter","Grocery Store","FALSE","FALSE","TRUE","20","28",48,26,3,120.468780620155,"Walmart",680939.46600461
+"28","SJ-022","Shamrock Foodservice Warehouse","Grocery Store","FALSE","FALSE","FALSE","4","0",4,14,2,180.004345535499,"Other",145610.858325839
+"29","SJ-020","Manila Sunrise Store","Grocery Store","FALSE","TRUE","FALSE","2","0",2,2,0,173.827015481523,"Other",128461.750892401
+"30","SJ-033","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","1","0",1,15,2,174.068364423348,"Family Dollar",32620.1624444127
+"31","SJ-040","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,8,1,188.105448095446,"Other",15646.641315937
+"32","SJ-031","Dollar General","Dollar Store","FALSE","FALSE","FALSE","3","0",3,10,6,169.779713518956,"Other",34612.2808456123
+"33","SJ-027","Dollar Tree","Dollar Store","FALSE","FALSE","FALSE","3","0",3,6,1,168.207877246229,"Dollar Tree",54552.5464326739
+"34","SJ-041","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,9,1,202.012684603382,"Other",9889.32231128216
+"35","SJ-061","Dollar General","Dollar Store","FALSE","FALSE","FALSE","2","0",2,14,-1,157.960135741178,"Other",51618.4510189295
+"36","SJ-017","Carneceria Sonora Market","Grocery Store","FALSE","TRUE","FALSE","1","0",1,3,0,164.970680015407,"Other",21642.2330960631
+"37","SJ-032","Family Dollar","Dollar Store","FALSE","FALSE","FALSE","1","0",1,12,2,168.583263648155,"Family Dollar",42812.5124628842
+"38","SJ-035","Big Lots","Other","FALSE","FALSE","FALSE","4","0",4,9,5,190.564382203973,"Other",44557.7378318012
+"39","SJ-018","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,3,0,173.704155024007,"Other",18880.0026650131
+"40","SJ-030","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,9,1,168.987459651897,"Other",31626.8862037659
+"41","SJ-023","Walgreens","Convenience Store","TRUE","FALSE","FALSE","7","0",7,10,0,184.271111402939,"Other",62110.1863228083
+"42","SJ-015","Target","Grocery Store","FALSE","FALSE","TRUE","13","4",17,24,4,155.307962969589,"Target",326885.904958487
+"43","SJ-012","Albertsons","Grocery Store","FALSE","FALSE","FALSE","12","4",16,26,4,137.78648372093,"Other",160015.196068585
+"44","SJ-058","Dollar Tree","Dollar Store","FALSE","FALSE","FALSE","3","2",5,6,2,167.814543912896,"Dollar Tree",208594.573826253
+"45","SJ-014","Walgreens","Other","TRUE","FALSE","FALSE","7","0",7,8,0,172.772143912896,"Other",60524.1028635502
+"46","SJ-016","Natural Grocers","Grocery Store","FALSE","FALSE","FALSE","4","0",4,15,2,222.497946006633,"Other",44047.9725882411
+"47","SJ-010","Smiths","Grocery Store","TRUE","FALSE","FALSE","12","10",22,27,3,133.334928682171,"Smith's",239767.897670448
+"48","SJ-039","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","1","0",1,5,0,168.979480962926,"Other",14301.2189551592
+"49","SJ-036","7-2-11 Food Store","Convenience Store","FALSE","FALSE","FALSE","2","0",2,9,1,185.521670317668,"Other",17936.7295809239
+"50","SJ-062","Dollar General","Dollar Store","FALSE","FALSE","FALSE","2","0",2,13,3,170.622591167534,"Other",23148.7791911662

@@ -1,0 +1,56 @@
+"","id","type","pharmacy","ethnic","merch","registers","selfchecko","total_registers","availability","cost","market","Name","brand","area"
+"1","UT-004","Other","FALSE","FALSE","FALSE","3","0",3,6,2,122.11524739728,"Rowley' Red Barn","Other",78283.5724722845
+"2","UT-005","Grocery Store","FALSE","FALSE","FALSE","2","0",2,12,3,144.201451161132,"Family Dollar ","Family Dollar",48990.1757584905
+"3","UT-001","Convenience Store","FALSE","FALSE","FALSE","1","0",1,13,5,122.191727703851,"Ivanov's Market","Other",11036.4483814181
+"4","UT-002","Grocery Store","TRUE","FALSE","FALSE","10","6",16,25,-1,122.014475968992,"Macey's","Macey's",96952.1890253775
+"5","UT-009","Other","FALSE","FALSE","FALSE","1","0",1,11,2,124.672786043926,"El Pueblo Market","Other",62870.3355871588
+"6","UT-008","Grocery Store","FALSE","FALSE","TRUE","25","8",33,25,3,104.614217054264,"Walmart Supercenter","Walmart",669196.928164244
+"7","UT-010","Grocery Store","TRUE","FALSE","FALSE","10","0",10,26,3,140.867587596899,"Smith's","Smith's",189156.105022956
+"8","UT-012","Grocery Store","FALSE","TRUE","FALSE","2","0",2,7,1,118.719353868569,"El Centro De Payson Mexican Store","Other",31443.5172620267
+"9","UT-011","Grocery Store","FALSE","TRUE","FALSE","2","0",2,11,1,98.9092658477352,"El Mercadito ","Other",28617.2296786352
+"10","UT-030","Grocery Store","TRUE","FALSE","FALSE","13","18",31,22,0,119.749215503876,"Smith's","Smith's",369110.288197744
+"11","UT-035","Grocery Store","TRUE","FALSE","FALSE","12","6",18,22,2,127.598266666667,"Macey's","Macey's",146271.007702927
+"12","UT-033","Grocery Store","FALSE","TRUE","FALSE","4","4",8,15,6,99.092209327431,"Rancho Market ","Other",47129.8013179228
+"13","UT-034","Grocery Store","TRUE","FALSE","FALSE","13","4",17,27,-2,128.467180620155,"Walmart Neighborhood Market","Walmart",332242.078394324
+"14","UT-053","Grocery Store","FALSE","FALSE","FALSE","9","0",9,20,3,111.309614235377,"Trader Joe's","Other",99813.8940993082
+"15","UT-052","Grocery Store","TRUE","FALSE","FALSE","13","6",19,23,-1,120.534771440228,"Harmon's","Harmons",309371.70858732
+"16","UT-040","Grocery Store","TRUE","FALSE","FALSE","32","16",48,26,-1,95.862292248062,"Walmart Supercenter","Walmart",635499.712944269
+"17","UT-041","Grocery Store","FALSE","FALSE","FALSE","5","6",11,22,1,125.650545073046,"Sprouts ","Other",41189.7988151014
+"18","UT-037","Grocery Store","FALSE","FALSE","FALSE","7","0",7,24,3,119.01763875969,"Day's Market ","Other",49224.355090946
+"19","UT-044","Grocery Store","FALSE","FALSE","FALSE","4","0",4,15,0,126.320564935543,"Good Earth","Other",45094.8788560508
+"20","UT-042","Other","FALSE","TRUE","FALSE","1","0",1,2,0,141.536209901386,"La Pequenita","Other",5309.22546948306
+"21","UT-043","Grocery Store","TRUE","FALSE","FALSE","11","12",23,26,-1,126.921015503876,"Smith's","Smith's",190454.689902159
+"22","UT-049","Grocery Store","FALSE","TRUE","FALSE","1","0",1,8,1,124.975064100278,"First Oriental Market","Other",11152.4004032314
+"23","UT-054","Grocery Store","FALSE","TRUE","FALSE","3","0",3,9,-1,99.97891660005,"El Mexicano Market","Other",43640.8008725052
+"24","UT-055","Grocery Store","TRUE","FALSE","FALSE","11","6",17,27,6,128.441613178295,"Macey's","Macey's",229147.336496539
+"25","UT-056","Grocery Store","FALSE","FALSE","FALSE","2","0",2,11,3,198.899428335832,"Real Foods Market","Other",55473.9535659552
+"26","UT-058","Grocery Store","FALSE","FALSE","FALSE","17","7",24,24,2,87.3229782945736,"WinCo","Winco",290471.431052804
+"27","UT-071","Grocery Store","FALSE","TRUE","FALSE","1","0",1,0,0,141.869002633944,"Jalisco's","Other",19011.3309709779
+"28","UT-070","Grocery Store","TRUE","FALSE","FALSE","17","6",23,25,3,131.470473643411,"Fresh Market","Other",188243.748311546
+"29","UT-074","Other","FALSE","FALSE","FALSE","4","0",4,21,-2,129.256269623043,"Good Earth","Other",57523.985800813
+"30","UT-077","Convenience Store","FALSE","FALSE","FALSE","2","0",2,3,1,141.878209901386,"Top Stop","Other",66375.7628036477
+"31","UT-078","Grocery Store","TRUE","FALSE","FALSE","10","1",11,25,1,109.23752248062,"Macey's","Macey's",184035.014765561
+"32","UT-079","Grocery Store","TRUE","FALSE","FALSE","5","0",5,25,4,117.378475968992,"Kohler's","Other",70814.0493241549
+"33","UT-018","Other","FALSE","FALSE","FALSE","5","0",5,24,-2,167.245256292182,"Good Earth","Other",53708.543800191
+"34","UT-019","Grocery Store","TRUE","FALSE","FALSE","12","6",18,25,6,119.151266666667,"Macey's","Macey's",233234.244919905
+"35","UT-022","Grocery Store","TRUE","FALSE","FALSE","11","0",11,23,5,173.222457364341,"Ream's","Other",131520.619185083
+"36","UT-021","Grocery Store","FALSE","FALSE","TRUE","17","12",29,26,-1,120.396834108527,"Smith's","Smith's",753431.245676424
+"37","UT-020","Grocery Store","FALSE","FALSE","TRUE","19","19",38,25,2,96.4251968992248,"Walmart Supercenter","Walmart",779944.601364911
+"38","UT-023","Other","FALSE","FALSE","FALSE","2","0",2,4,0,181.741912179374,"Lemon and Sage Market","Other",5094.15305495262
+"39","UT-081","Grocery Store","FALSE","FALSE","TRUE","23","12",35,27,2,123.634034108527,"Smith's","Smith's",438487.757862358
+"40","UT-082","Grocery Store","FALSE","FALSE","TRUE","26","10",36,23,5,118.406492248062,"Walmart Supercenter","Walmart",633617.874037728
+"41","UT-084","Grocery Store","TRUE","FALSE","FALSE","10","0",10,25,3,100.532892248062,"Ridley's Family Market","Other",170763.31724183
+"42","UT-090","Grocery Store","FALSE","FALSE","FALSE","4","0",4,23,2,112.152841860465,"Meier's Meats and fine foods ","Other",84625.4026131332
+"43","UT-066","Grocery Store","FALSE","FALSE","TRUE","18","6",24,26,6,103.627717829457,"Walmart Supercenter","Walmart",465002.548030853
+"44","UT-065","Grocery Store","TRUE","FALSE","FALSE","9","5",14,25,3,121.354615503876,"Smith's","Smith's",179704.948240161
+"45","UT-091","Grocery Store","TRUE","FALSE","FALSE","9","5",14,25,3,118.61552248062,"Macey's","Macey's",193791.260335349
+"46","UT-017","Grocery Store","TRUE","FALSE","FALSE","6","8",14,25,3,144.076658914729,"Walmart Neighborhood Market","Walmart",233120.010701567
+"47","UT-047","Grocery Store","FALSE","FALSE","TRUE","0","0",0,0,0,141.869002633944,"Target Grocery","Target",531405.161341667
+"48","UT-036","Grocery Store","FALSE","FALSE","TRUE","6","4",10,21,2,152.371041860465,"Target Grocery","Target",84359.2102832147
+"49","UT-014","Grocery Store","TRUE","FALSE","FALSE","9","0",9,22,5,115.56203875969,"Payson Market","Other",124388.744314269
+"50","UT-015","Grocery Store","FALSE","FALSE","FALSE","6","0",6,24,7,116.709348837209,"Stokes Salem Inc","Other",212741.596447359
+"51","UT-026","Grocery Store","FALSE","TRUE","FALSE","2","0",2,6,-1,150.032830328348,"Asian Market","Other",39668.2839143872
+"52","UT-025","Grocery Store","FALSE","FALSE","FALSE","5","4",9,26,1,125.57152248062,"Fresh Market","Other",155396.257073551
+"53","UT-029","Grocery Store","FALSE","FALSE","FALSE","3","0",3,21,3,161.016866315407,"South End Market","Other",35959.8086360395
+"54","UT-069","Grocery Store","FALSE","FALSE","FALSE","8","4",12,28,3,100.388289922481,"Walmart Neighborhood Market","Walmart",235006.340925455
+"55","UT-016","Grocery Store","TRUE","FALSE","TRUE","11","18",29,27,3,96.092692248062,"Walmart Supercenter","Walmart",450367.211878121
