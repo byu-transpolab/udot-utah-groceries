@@ -148,9 +148,12 @@ combine_data <- function(data, exist_data){
 }
 
 impute_data <- function(data){
-  library(mice)
+  data <- data %>% as_tibble() %>% select(Name, type,county, total_registers,
+                                          availability, cost, market, brand,
+                                          county_type, income, black, asian,
+                                          white, population)
   
-  imp <- mice(data, method = "norm.predict", m = 10, maxit = 25)
+  imp <- mice(data, method = "mean", m = 10, maxit = 25)
   
   imputed_data <- complete(imp)
   imputed_data
@@ -167,30 +170,63 @@ get_acs_data <- function(combined_data, county_file){
   for(x in 2:length(counties$NAME)){
     acs_tibble <- rbind(acs_tibble, get_acs_income_data("UT", counties$Name[x]))
   }
-  acs_tibble_2 <- acs_tibble %>% group_by(GEOID) %>% slice(1)
+  acs_tibble_2 <- acs_tibble %>% group_by(geoid) %>% slice(1)
   
   DT_sf = st_as_sf(combined_data, coords = c("Longitude", "Latitude"), crs = 4326)
   DT_sf$income <- NA
-  
+  DT_sf$black <- NA
+  DT_sf$asian <- NA
+  DT_sf$white <- NA
+  DT_sf$population <- NA
+ 
   acs_geom <- acs_tibble_2 %>% select(geometry) %>% st_as_sf() %>% st_transform(4326)
   grocery_geom <- DT_sf %>% select(geometry) %>% st_as_sf()
   
   for(x in 1:length(acs_geom$geometry)){
     for(y in 1:length(grocery_geom$geometry)){
       if(st_intersects(grocery_geom$geometry[y], acs_geom$geometry[x], sparse = FALSE)==TRUE){
-        DT_sf$income[y] <- acs_tibble_2$estimate[x]
+        DT_sf$income[y] <- acs_tibble_2$income[x]
+        DT_sf$black[y] <- acs_tibble_2$black[x]
+        DT_sf$asian[y] <- acs_tibble_2$asian[x]
+        DT_sf$white[y] <- acs_tibble_2$white[x]
+        DT_sf$population[y] <- acs_tibble_2$population[x]
       }
     }
   }
   DT_sf
+  #acs_tibble_2
 }
 
 get_acs_income_data <- function(stat, county){
-  variables <- c("income" = "B19013_001")
+  variables <- c("population" = "B02001_001",
+                 "income" = "B19013_001",
+                 "white" = "B03002_003",
+                 "black" = "B03002_004",
+                 "asian" = "B03002_006")
   
-  income_table <- get_acs(geography = "tract", variables = "B19013_001",
+  #income_table <- get_acs(geography = "tract", variables = variables,
+   #       state = stat, county = county, geometry = TRUE) %>%
+    #as_tibble()
+  
+  
+  tibble <- get_acs(geography = "tract", variables = variables,
           state = stat, county = county, geometry = TRUE) %>%
+    select(-moe) %>%
+    spread(variable, estimate) %>%
+    transmute(
+      geoid = GEOID,
+      group = 1,
+      population,
+      income,
+      # many of the variables come in raw counts, but we want to consider
+      # them as shares of a relevant denominator.
+      black        = 100 * black / population,
+      asian        = 100 * asian / population,
+      white        = 100 * white / population
+    ) %>%
+    filter(population > 0) %>%
     as_tibble()
+  
   
 }
 
