@@ -14,7 +14,7 @@ source("R/DataMaker.R")
 # Set target-specific options such as packages.
 tar_option_set(packages = c("tidyverse", "sf", "ggplot2", "readxl", "leaflet", "gsubfn", "r5r", "rstudioapi",
                             "otpr", "leaflet", "tidycensus", "parallel", "haven", 
-                            "mlogit", "jsonlite", "VGAM", "nemsr", "modelsummary", "tigris",
+                            "mlogit", "jsonlite", "VGAM", "modelsummary", "tigris",
                             "viridis", "ggspatial", "dplyr", "rgdal", "mice"))
 
 options(tigris_use_cache = TRUE)
@@ -27,6 +27,6 @@ list(
   tar_target(data, create_data("Data/Utah_Grocery_And_Food_Stores__UDAF_.geojson", "Utah_County_Boundaries/Counties.shp")),
   tar_target(exist_data, existing_data("Data/data_sanjuan.csv", "Data/data_utah.csv", "Data/data_saltlake.csv")),
   tar_target(combined_data, combine_data(data, exist_data)),
-  #tar_target(acs_data_table, get_acs_data(combined_data, "Utah_County_Boundaries/Counties.shp")),
-  tar_target(imputed_data, impute_data(combined_data))
+  tar_target(acs_data_table, get_acs_data(combined_data, "Utah_County_Boundaries/Counties.shp")),
+  tar_target(imputed_data, impute_data(acs_data_table))
 )
