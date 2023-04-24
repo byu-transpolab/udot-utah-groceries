@@ -62,7 +62,9 @@ combine_data <- function(data, exist_data){
   data$Name <- data$NAME
   data$type <- data$TYPE
   
-  data <- data %>% select(Name, type, county, registers, selfchecko, total_registers,
+  data <- data %>% select(Name, type, county, 
+                          #registers, selfchecko, 
+                          total_registers,
                           availability, cost, market, brand, Latitude, Longitude)
   
   #now for the data that already exists
@@ -76,7 +78,9 @@ combine_data <- function(data, exist_data){
     exist_data$county[x] <- "SALT LAKE"
     }
   }
-  exist_data <- exist_data %>% select(Name, type, county, registers, selfchecko, total_registers,
+  exist_data <- exist_data %>% select(Name, type, county, 
+                                      #registers, selfchecko, 
+                                      total_registers,
                                       availability, cost, market, brand, Latitude, Longitude)
   
   #binds the existinf data with the overall grocery stores data
@@ -126,6 +130,19 @@ combine_data <- function(data, exist_data){
     }
   }
   
+  combined_data$county_type <- NA
+  
+  for(x in 1:length(combined_data$county)){
+    if(grepl("utah", tolower(combined_data$county[x]), fixed = TRUE) == TRUE){
+      combined_data$county_type[x] <- 1
+    } else if(grepl("wasatch", tolower(combined_data$county[x]), fixed = TRUE) == TRUE){
+      combined_data$county_type[x] <- 1
+    } else if(grepl("salt", tolower(combined_data$county[x]), fixed = TRUE) == TRUE){
+      combined_data$county_type[x] <- 2
+    } else{
+      combined_data$county_type[x] <- 3
+    }
+  }
   
   combined_data
 }
@@ -133,10 +150,13 @@ combine_data <- function(data, exist_data){
 impute_data <- function(data){
   library(mice)
   
-  imp <- mice(data, method = "mean", m = 1, maxit = 1)
+  imp <- mice(data, method = "norm.predict", m = 10, maxit = 25)
   
   imputed_data <- complete(imp)
   imputed_data
+  
+  #potentially create three county variables and use mean that way
+  #pull in the ethnic data
 }
 
 
@@ -168,7 +188,7 @@ get_acs_data <- function(combined_data, county_file){
 get_acs_income_data <- function(stat, county){
   variables <- c("income" = "B19013_001")
   
-  income_table <- get_acs(geography = "block group", variables = "B19013_001",
+  income_table <- get_acs(geography = "tract", variables = "B19013_001",
           state = stat, county = county, geometry = TRUE) %>%
     as_tibble()
   
