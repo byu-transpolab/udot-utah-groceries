@@ -1,19 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-combine_data|function|20b49bc6d286b070|||||||||||||||
-combined_data|stem|2d9dfdc8d97f27d8|27e4b1f516ef2c9a|83af4741dc2ceaba|-2087540798||t19465.7069633978s|52ae0227e1cb8b83|31694|rds|local|vector|||0.627||
+combine_data|function|65caa54bde39a8a0|||||||||||||||
+combined_data|stem|c9311e96fcb9390a|27e4b1f516ef2c9a|3819338e3a410122|-2087540798||t19467.1916089443s|8c871a0934f661c5|31739|rds|local|vector|||0.643||
 create_data|function|cda541ec150877c5|||||||||||||||
 data|stem|76cbbe4a2220691b|2ce77895d521a4e6|834cf385c1b73580|1588979285||t19465.7018164789s|8686afdf5acc57a8|87477|rds|local|vector|||722.615||
 data_path|object|7027d3927d618dc2|||||||||||||||
 exist_data|stem|42c694ce77943ef8|028a9009651c54d2|72e5726f5f4e3965|782767558||t19465.6768824803s|8eac4585accd25ba|6221|rds|local|vector|||2.913||
 existing_data|function|964bca052ff200c8|||||||||||||||
-get_acs_data|function|8075d9c579e561d9|||||||||||||||
-get_acs_income_data|function|ee5e67b17348f487|||||||||||||||
-impute_data|function|379f941b4edc28f7|||||||||||||||
-imputed_data|stem|72ca5c6ff1cda44e|484356d642c1a9b9|4c18005c559cb491|-1778213988||t19465.796556121s|d12790d188af5e8b|31853|rds|local|vector|||0.682|Number of logged events 7|
+get_acs_data|function|4efeaf0cfe7ffbdf|||||||||||||||
+get_acs_income_data|function|9656473f51f519d7|||||||||||||||
+impute_data|function|2906474134a7af4b|||||||||||||||
+imputed_data|stem|dcc3fdddc7e0f4d5|484356d642c1a9b9|cfcedbf342b140ae|-1778213988||t19467.1916661789s|9c756330a7460113|60031|rds|local|vector|||4.931|Number of logged events 4|
 latlong2county|function|e8586a899bb9aa39|||||||||||||||
-create_data|function|cda541ec150877c5
-combine_data|function|20b49bc6d286b070
-impute_data|function|379f941b4edc28f7
-existing_data|function|964bca052ff200c8
-get_acs_income_data|function|ee5e67b17348f487
-get_acs_data|function|8075d9c579e561d9
