@@ -153,7 +153,7 @@ impute_data <- function(data){
                                           county_type, income, black, asian,
                                           white, population)
   
-  imp <- mice(data, method = "mean", m = 10, maxit = 25)
+  imp <- mice(data, method = "norm.predict", m = 5, maxit = 10)
   
   imputed_data <- complete(imp)
   imputed_data
