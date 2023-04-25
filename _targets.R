@@ -27,6 +27,9 @@ list(
   tar_target(data, create_data("Data/Utah_Grocery_And_Food_Stores__UDAF_.geojson", "Utah_County_Boundaries/Counties.shp")),
   tar_target(exist_data, existing_data("Data/data_sanjuan.csv", "Data/data_utah.csv", "Data/data_saltlake.csv")),
   tar_target(combined_data, combine_data(data, exist_data)),
+  
+  #this target takes 2.5 hours to build so keep that in mind
   tar_target(acs_data_table, get_acs_data(combined_data, "Utah_County_Boundaries/Counties.shp")),
+ 
   tar_target(imputed_data, impute_data(acs_data_table))
 )
